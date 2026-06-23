@@ -1,0 +1,14 @@
+# GlucoHero Robots.txt
+# Allow all search engines to index the site
+
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /.next
+Disallow: /private
+
+# Sitemap
+Sitemap: https://glucoheros.app/sitemap.xml
+
+# Crawl delay (optional - no delay)
+Crawl-delay: 0

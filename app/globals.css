@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&family=Bubblegum+Sans&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+    --font-fredoka: 'Fredoka', 'Nunito', sans-serif;
+    --font-playful: 'Bubblegum Sans', cursive;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom Scrollbar Styling */
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #317CA2;
+    border-radius: 6px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #1f5a7e;
+  }
+
+  /* Firefox */
+  * {
+    scrollbar-color: #317CA2 rgba(255, 255, 255, 0.1);
+    scrollbar-width: thin;
+  }
+
+  body {
+    @apply bg-gradient-gluco min-h-screen font-fredoka text-lg;
+    font-family: 'Fredoka', 'Nunito', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bubblegum Sans', 'Fredoka', cursive;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 rounded-full font-bold bg-gluco-orange hover:bg-orange-600 text-white shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 rounded-full font-bold bg-white border-2 border-gluco-blue text-gluco-blue hover:bg-blue-50 transition-all duration-200;
+  }
+
+  .btn-small {
+    @apply px-4 py-2 rounded-lg font-semibold bg-gluco-orange hover:bg-orange-600 text-white transition-all;
+  }
+
+  .card-playful {
+    @apply bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border-4 border-gluco-blue p-6 transform hover:-translate-y-2;
+  }
+
+  .heading-main {
+    @apply text-5xl md:text-7xl font-bold text-gluco-blue;
+  }
+
+  .heading-section {
+    @apply text-3xl md:text-5xl font-bold text-gluco-blue mb-4;
+  }
+
+  .text-muted {
+    @apply text-gray-600;
+  }
+
+  .badge-price {
+    @apply inline-block px-5 py-2.5 bg-gluco-orange text-white font-semibold rounded-full text-base;
+  }
+
+  .hero-image {
+    @apply rounded-2xl overflow-hidden shadow-xl border-4 border-gluco-blue;
+  }
+
+  .section-with-bg {
+    @apply relative overflow-hidden;
+  }
+
+  .section-with-bg::before {
+    @apply absolute inset-0 z-0 opacity-20;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+/* Enhanced Animations */
+@keyframes bounce-slow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-25px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(255, 138, 80, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(255, 138, 80, 0.8);
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounce-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+  }
+  70% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 3s infinite;
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 3s infinite;
+}
+
+.animate-slide-left {
+  animation: slide-in-left 0.6s ease-out;
+}
+
+.animate-slide-right {
+  animation: slide-in-right 0.6s ease-out;
+}
+
+.animate-bounce-in {
+  animation: bounce-in 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Scroll Icon Animation */
+@keyframes scroll-bounce {
+  0%, 20%, 50%, 80%, 100% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0.5;
+  }
+  60% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes scroll-icon-pulse {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+.animate-scroll-bounce {
+  animation: scroll-bounce 2s infinite;
+}
+
+.animate-scroll-icon {
+  animation: scroll-icon-pulse 1.5s ease-in-out infinite;
+}

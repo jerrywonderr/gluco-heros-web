@@ -1,0 +1,17 @@
+{
+  "env": {
+    "NEXT_PUBLIC_APP_NAME": "Glucoheros"
+  },
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/next"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ]
+}
