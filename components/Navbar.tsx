@@ -25,7 +25,7 @@ export function Navbar() {
               href="/"
               className="hidden sm:block text-lg sm:text-2xl font-bold text-gluco-blue hover:text-gluco-teal transition-colors whitespace-nowrap"
             >
-              Gluco Heroes
+              Glucoheros
             </Link>
           </div>
 
