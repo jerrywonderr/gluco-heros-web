@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl';
 import { Metadata } from 'next';
 
 export default function Support() {
-  const t = useTranslations();
+  const t = useTranslations('support');
 
   return (
     <div className="relative">
@@ -20,17 +20,17 @@ export default function Support() {
 
         {/* Content */}
         <div className="relative z-10 max-w-5xl mx-auto text-center">
-          <h1 className="heading-main mb-4 animate-bounce-slow text-white drop-shadow-lg">{t('support.hero.title')}</h1>
-          <p className="text-2xl text-white drop-shadow-lg mb-12">{t('support.hero.subtitle')}</p>
+          <h1 className="heading-main mb-4 animate-bounce-slow text-white drop-shadow-lg">{t('hero.title')}</h1>
+          <p className="text-2xl text-white drop-shadow-lg mb-12">{t('hero.subtitle')}</p>
 
           {/* Contact Cards */}
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             {/* Email */}
             <div className="card-playful text-center animate-slide-left">
               <div className="text-6xl mb-4">📧</div>
-              <h3 className="text-2xl font-bold text-gluco-blue mb-4">{t('support.contact.email')}</h3>
+              <h3 className="text-2xl font-bold text-gluco-blue mb-4">{t('contact.email')}</h3>
               <p className="text-gray-700 mb-6">
-                {t('support.contact.emailDesc')}
+                {t('contact.emailDesc')}
               </p>
               <a
                 href="mailto:hello@glucoheros.app"
@@ -43,9 +43,9 @@ export default function Support() {
             {/* Phone */}
             <div className="card-playful text-center animate-slide-right">
               <div className="text-6xl mb-4">☎️</div>
-              <h3 className="text-2xl font-bold text-gluco-blue mb-4">{t('support.contact.phone')}</h3>
+              <h3 className="text-2xl font-bold text-gluco-blue mb-4">{t('contact.phone')}</h3>
               <p className="text-gray-700 mb-6">
-                {t('support.contact.phoneDesc')}
+                {t('contact.phoneDesc')}
               </p>
               <a
                 href="tel:+972XXXXXXXXX"
@@ -59,9 +59,9 @@ export default function Support() {
           {/* Scroll to FAQs Button */}
           <a
             href="#faq-section"
-            className="mx-auto block btn-primary text-lg inline-block"
+            className="mx-auto btn-primary text-lg inline-block"
           >
-            {t('support.faq.title')} ⬇️
+            {t('faq.title')} ⬇️
           </a>
         </div>
       </section>
@@ -69,95 +69,97 @@ export default function Support() {
       {/* FAQ Section */}
       <section id="faq-section" className="py-20 px-4 bg-gradient-gluco">
         <div className="max-w-4xl mx-auto">
-          <h2 className="heading-section text-center mb-12">{t('support.faq.title')}</h2>
+          <h2 className="heading-section text-center mb-12">{t('faq.title')}</h2>
 
           <div className="space-y-6">
             <details className="card-playful group cursor-pointer">
               <summary className="flex items-center justify-between font-bold text-gluco-blue text-lg">
-                <span>{t('support.faq.price')}</span>
+                <span>{t('faq.price')}</span>
                 <span className="transition-transform group-open:rotate-180 text-2xl">▼</span>
               </summary>
-              <p className="mt-4 text-gray-700">{t('support.faq.priceAnswer')}</p>
+              <p className="mt-4 text-gray-700">{t('faq.priceAnswer')}</p>
             </details>
 
             <details className="card-playful group cursor-pointer">
               <summary className="flex items-center justify-between font-bold text-gluco-blue text-lg">
-                <span>{t('support.faq.age')}</span>
+                <span>{t('faq.age')}</span>
                 <span className="transition-transform group-open:rotate-180 text-2xl">▼</span>
               </summary>
-              <p className="mt-4 text-gray-700">{t('support.faq.ageAnswer')}</p>
+              <p className="mt-4 text-gray-700">{t('faq.ageAnswer')}</p>
             </details>
 
             <details className="card-playful group cursor-pointer">
               <summary className="flex items-center justify-between font-bold text-gluco-blue text-lg">
-                <span>{t('support.faq.data')}</span>
+                <span>{t('faq.data')}</span>
                 <span className="transition-transform group-open:rotate-180 text-2xl">▼</span>
               </summary>
-              <p className="mt-4 text-gray-700">{t('support.faq.dataAnswer')}</p>
+              <p className="mt-4 text-gray-700">{t('faq.dataAnswer')}</p>
             </details>
 
             <details className="card-playful group cursor-pointer">
               <summary className="flex items-center justify-between font-bold text-gluco-blue text-lg">
-                <span>{t('support.faq.games')}</span>
+                <span>{t('faq.games')}</span>
                 <span className="transition-transform group-open:rotate-180 text-2xl">▼</span>
               </summary>
-              <p className="mt-4 text-gray-700">{t('support.faq.gamesAnswer')}</p>
+              <p className="mt-4 text-gray-700">{t('faq.gamesAnswer')}</p>
             </details>
 
             <details className="card-playful group cursor-pointer">
               <summary className="flex items-center justify-between font-bold text-gluco-blue text-lg">
-                <span>{t('support.faq.mood')}</span>
+                <span>{t('faq.mood')}</span>
                 <span className="transition-transform group-open:rotate-180 text-2xl">▼</span>
               </summary>
-              <p className="mt-4 text-gray-700">{t('support.faq.moodAnswer')}</p>
+              <p className="mt-4 text-gray-700">{t('faq.moodAnswer')}</p>
             </details>
 
             <details className="card-playful group cursor-pointer">
               <summary className="flex items-center justify-between font-bold text-gluco-blue text-lg">
-                <span>{t('support.faq.missions')}</span>
+                <span>{t('faq.missions')}</span>
                 <span className="transition-transform group-open:rotate-180 text-2xl">▼</span>
               </summary>
-              <p className="mt-4 text-gray-700">{t('support.faq.missionsAnswer')}</p>
+              <p className="mt-4 text-gray-700">{t('faq.missionsAnswer')}</p>
             </details>
 
             <details className="card-playful group cursor-pointer">
               <summary className="flex items-center justify-between font-bold text-gluco-blue text-lg">
-                <span>{t('support.faq.devices')}</span>
+                <span>{t('faq.devices')}</span>
                 <span className="transition-transform group-open:rotate-180 text-2xl">▼</span>
               </summary>
-              <p className="mt-4 text-gray-700">{t('support.faq.devicesAnswer')}</p>
+              <p className="mt-4 text-gray-700">{t('faq.devicesAnswer')}</p>
             </details>
 
             <details className="card-playful group cursor-pointer">
               <summary className="flex items-center justify-between font-bold text-gluco-blue text-lg">
-                <span>{t('support.faq.badges')}</span>
+                <span>{t('faq.badges')}</span>
                 <span className="transition-transform group-open:rotate-180 text-2xl">▼</span>
               </summary>
-              <p className="mt-4 text-gray-700">{t('support.faq.badgesAnswer')}</p>
+              <p className="mt-4 text-gray-700">{t('faq.badgesAnswer')}</p>
             </details>
 
             <details className="card-playful group cursor-pointer">
               <summary className="flex items-center justify-between font-bold text-gluco-blue text-lg">
-                <span>{t('support.faq.plush')}</span>
+                <span>{t('faq.plush')}</span>
                 <span className="transition-transform group-open:rotate-180 text-2xl">▼</span>
               </summary>
-              <p className="mt-4 text-gray-700">{t('support.faq.plushAnswer')}</p>
+              <p className="mt-4 text-gray-700">{t('faq.plushAnswer')}</p>
             </details>
 
             <details className="card-playful group cursor-pointer">
               <summary className="flex items-center justify-between font-bold text-gluco-blue text-lg">
-                <span>{t('support.faq.economy')}</span>
+                <span>{t('economy')}</span>
                 <span className="transition-transform group-open:rotate-180 text-2xl">▼</span>
               </summary>
-              <p className="mt-4 text-gray-700" dangerouslySetInnerHTML={{__html: t('support.faq.economyAnswer')}}></p>
+              <p className="mt-4 text-gray-700">
+                {t('economyAnswerMain')} <strong>{t('economyAnswerCTA')}</strong> {t('economyAnswerFooter')}
+              </p>
             </details>
 
             <details className="card-playful group cursor-pointer">
               <summary className="flex items-center justify-between font-bold text-gluco-blue text-lg">
-                <span>{t('support.faq.updates')}</span>
+                <span>{t('faq.updates')}</span>
                 <span className="transition-transform group-open:rotate-180 text-2xl">▼</span>
               </summary>
-              <p className="mt-4 text-gray-700">{t('support.faq.updatesAnswer')}</p>
+              <p className="mt-4 text-gray-700">{t('faq.updatesAnswer')}</p>
             </details>
           </div>
         </div>
@@ -166,31 +168,31 @@ export default function Support() {
       {/* Trust Section */}
       <section className="py-20 px-4">
         <div className="max-w-5xl mx-auto">
-          <h2 className="heading-section text-center mb-12">{t('support.trust.title')}</h2>
+          <h2 className="heading-section text-center mb-12">{t('trust.title')}</h2>
 
           <div className="grid md:grid-cols-4 gap-6">
             <div className="card-playful text-center animate-bounce-in">
               <div className="text-5xl mb-4">🔐</div>
-              <h3 className="font-bold text-gluco-blue mb-2">{t('support.trust.privacyFirst')}</h3>
-              <p className="text-gray-700 text-sm">{t('support.trust.privacyFirstDesc')}</p>
+              <h3 className="font-bold text-gluco-blue mb-2">{t('trust.privacyFirst')}</h3>
+              <p className="text-gray-700 text-sm">{t('trust.privacyFirstDesc')}</p>
             </div>
 
             <div className="card-playful text-center animate-bounce-in" style={{animationDelay: '0.1s'}}>
               <div className="text-5xl mb-4">💪</div>
-              <h3 className="font-bold text-gluco-blue mb-2">{t('support.trust.builtForKids')}</h3>
-              <p className="text-gray-700 text-sm">{t('support.trust.builtForKidsDesc')}</p>
+              <h3 className="font-bold text-gluco-blue mb-2">{t('trust.builtForKids')}</h3>
+              <p className="text-gray-700 text-sm">{t('trust.builtForKidsDesc')}</p>
             </div>
 
             <div className="card-playful text-center animate-bounce-in" style={{animationDelay: '0.2s'}}>
               <div className="text-5xl mb-4">✅</div>
-              <h3 className="font-bold text-gluco-blue mb-2">{t('support.trust.noAds')}</h3>
-              <p className="text-gray-700 text-sm">{t('support.trust.noAdsDesc')}</p>
+              <h3 className="font-bold text-gluco-blue mb-2">{t('trust.noAds')}</h3>
+              <p className="text-gray-700 text-sm">{t('trust.noAdsDesc')}</p>
             </div>
 
             <div className="card-playful text-center animate-bounce-in" style={{animationDelay: '0.3s'}}>
               <div className="text-5xl mb-4">🆓</div>
-              <h3 className="font-bold text-gluco-blue mb-2">{t('support.trust.onePrice')}</h3>
-              <p className="text-gray-700 text-sm">{t('support.trust.onePriceDesc')}</p>
+              <h3 className="font-bold text-gluco-blue mb-2">{t('trust.onePrice')}</h3>
+              <p className="text-gray-700 text-sm">{t('trust.onePriceDesc')}</p>
             </div>
           </div>
         </div>
@@ -198,8 +200,8 @@ export default function Support() {
 
       {/* Contact Info Footer */}
       <section className="py-16 px-4 bg-gradient-fun text-white text-center">
-        <h2 className="text-3xl font-bold mb-6">{t('support.stillQuestions.title')}</h2>
-        <p className="text-lg mb-8 text-white/90">{t('support.stillQuestions.subtitle')}</p>
+        <h2 className="text-3xl font-bold mb-6">{t('stillQuestions.title')}</h2>
+        <p className="text-lg mb-8 text-white/90">{t('stillQuestions.subtitle')}</p>
         <div className="flex flex-col sm:flex-row gap-8 justify-center">
           <a href="mailto:hello@glucoheros.app" className="text-white hover:text-gluco-beige transition-colors">
             <span className="text-3xl">📧</span>

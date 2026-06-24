@@ -1,11 +1,10 @@
 'use client';
 
-import { useTranslations, useLocale } from 'next-intl';
+import { useTranslations } from 'next-intl';
 import { Metadata } from "next";
 
 export default function Home() {
-  const t = useTranslations();
-  const locale = useLocale();
+  const t = useTranslations('home');
 
   return (
     <div className="overflow-hidden">
@@ -30,57 +29,57 @@ export default function Home() {
         <div className="max-w-5xl mx-auto relative z-10 mt-10">
           <div className="mb-8 animate-bounce-in">
             <h1 className="heading-main mb-6 animate-bounce-slow inline-block text-white drop-shadow-lg">
-              {t('home.hero.title')}
+              {t('hero.title')}
             </h1>
           </div>
 
           <p className="text-xl md:text-2xl text-white mb-4 animate-slide-left drop-shadow-lg font-bold">
-            {t('home.hero.subtitle')}
+            {t('hero.subtitle')}
           </p>
 
           <p className="text-lg md:text-xl text-white mb-8 animate-slide-right drop-shadow-lg">
-            {t('home.hero.description')}
+            {t('hero.description')}
           </p>
 
           {/* Pricing Badge */}
           <div className="mb-8 flex justify-center gap-4 flex-wrap animate-bounce-in" style={{animationDelay: '0.3s'}}>
-            <span className="badge-price">{t('home.pricing.oneTime')}</span>
-            <span className="badge-price">{t('home.pricing.noIAP')}</span>
-            <span className="badge-price">{t('home.pricing.privacy')}</span>
+            <span className="badge-price">{t('pricing.oneTime')}</span>
+            <span className="badge-price">{t('pricing.noIAP')}</span>
+            <span className="badge-price">{t('pricing.privacy')}</span>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <button className="btn-primary text-lg animate-pulse-glow">{t('home.buttons.download')}</button>
-            <button className="btn-secondary text-lg">{t('home.buttons.learnMore')}</button>
+            <button className="btn-primary text-lg animate-pulse-glow">{t('buttons.download')}</button>
+            <button className="btn-secondary text-lg">{t('buttons.learnMore')}</button>
           </div>
 
           {/* Hero Characters Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 mb-10">
             <div className="card-playful animate-bounce-in" style={{animationDelay: '0.1s'}}>
               <div className="w-full h-40 bg-gluco-beige rounded-lg mb-4 flex items-center justify-center">
-                <img src="/assets/hero-lion-happy.png" alt={t('home.characters.leo')} className="h-40 w-auto" />
+                <img src="/assets/hero-lion-happy.png" alt={t('characters.leo')} className="h-40 w-auto" />
               </div>
-              <p className="font-bold text-2xl text-gluco-blue">{t('home.characters.leo')} 🦁</p>
-              <p className="text-sm text-gray-600">{t('home.characters.leoBio')}</p>
-              <p className="text-xs text-gray-500 mt-2">{t('home.characters.leoTraits')}</p>
+              <p className="font-bold text-2xl text-gluco-blue">{t('characters.leo')} 🦁</p>
+              <p className="text-sm text-gray-600">{t('characters.leoBio')}</p>
+              <p className="text-xs text-gray-500 mt-2">{t('characters.leoTraits')}</p>
             </div>
 
             <div className="card-playful animate-bounce-in" style={{animationDelay: '0.2s'}}>
               <div className="w-full h-40 bg-gluco-beige rounded-lg mb-4 flex items-center justify-center">
-                <img src="/assets/hero-fox-happy.png" alt={t('home.characters.fiona')} className="h-40 w-auto" />
+                <img src="/assets/hero-fox-happy.png" alt={t('characters.fiona')} className="h-40 w-auto" />
               </div>
-              <p className="font-bold text-2xl text-gluco-blue">{t('home.characters.fiona')} 🦊</p>
-              <p className="text-sm text-gray-600">{t('home.characters.fionaBio')}</p>
-              <p className="text-xs text-gray-500 mt-2">{t('home.characters.fionaTraits')}</p>
+              <p className="font-bold text-2xl text-gluco-blue">{t('characters.fiona')} 🦊</p>
+              <p className="text-sm text-gray-600">{t('characters.fionaBio')}</p>
+              <p className="text-xs text-gray-500 mt-2">{t('characters.fionaTraits')}</p>
             </div>
 
             <div className="card-playful animate-bounce-in" style={{animationDelay: '0.3s'}}>
               <div className="w-full h-40 bg-gluco-beige rounded-lg mb-4 flex items-center justify-center">
-                <img src="/assets/hero-elephant-happy.png" alt={t('home.characters.ellie')} className="h-40 w-auto" />
+                <img src="/assets/hero-elephant-happy.png" alt={t('characters.ellie')} className="h-40 w-auto" />
               </div>
-              <p className="font-bold text-2xl text-gluco-blue">{t('home.characters.ellie')} 🐘</p>
-              <p className="text-sm text-gray-600">{t('home.characters.ellieBio')}</p>
-              <p className="text-xs text-gray-500 mt-2">{t('home.characters.ellieTraits')}</p>
+              <p className="font-bold text-2xl text-gluco-blue">{t('characters.ellie')} 🐘</p>
+              <p className="text-sm text-gray-600">{t('characters.ellieBio')}</p>
+              <p className="text-xs text-gray-500 mt-2">{t('characters.ellieTraits')}</p>
             </div>
           </div>
         </div>
@@ -92,49 +91,49 @@ export default function Home() {
           style={{backgroundImage: 'url(/assets/games-hero-banner-v1.png)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed'}}></div>
 
         <div className="max-w-6xl mx-auto">
-          <h2 className="heading-section text-center mb-12">{t('home.games.title')}</h2>
+          <h2 className="heading-section text-center mb-12">{t('games.title')}</h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Game 1 */}
             <div className="card-playful animate-slide-left">
               <div className="text-5xl mb-4">🩸</div>
-              <h3 className="font-bold text-gluco-blue mb-2 text-lg">{t('home.games.bloodSugar')}</h3>
-              <p className="text-gray-700 text-sm">{t('home.games.bloodSugarDesc')}</p>
+              <h3 className="font-bold text-gluco-blue mb-2 text-lg">{t('games.bloodSugar')}</h3>
+              <p className="text-gray-700 text-sm">{t('games.bloodSugarDesc')}</p>
             </div>
 
             {/* Game 2 */}
             <div className="card-playful animate-bounce-in">
               <div className="text-5xl mb-4">⚖️</div>
-              <h3 className="font-bold text-gluco-blue mb-2 text-lg">{t('home.games.hypoHyper')}</h3>
-              <p className="text-gray-700 text-sm">{t('home.games.hypoHyperDesc')}</p>
+              <h3 className="font-bold text-gluco-blue mb-2 text-lg">{t('games.hypoHyper')}</h3>
+              <p className="text-gray-700 text-sm">{t('games.hypoHyperDesc')}</p>
             </div>
 
             {/* Game 3 */}
             <div className="card-playful animate-slide-right">
               <div className="text-5xl mb-4">🍽️</div>
-              <h3 className="font-bold text-gluco-blue mb-2 text-lg">{t('home.games.buildPlate')}</h3>
-              <p className="text-gray-700 text-sm">{t('home.games.buildPlateDesc')}</p>
+              <h3 className="font-bold text-gluco-blue mb-2 text-lg">{t('games.buildPlate')}</h3>
+              <p className="text-gray-700 text-sm">{t('games.buildPlateDesc')}</p>
             </div>
 
             {/* Game 4 */}
             <div className="card-playful animate-slide-left" style={{animationDelay: '0.2s'}}>
               <div className="text-5xl mb-4">🏃</div>
-              <h3 className="font-bold text-gluco-blue mb-2 text-lg">{t('home.games.balanceRun')}</h3>
-              <p className="text-gray-700 text-sm">{t('home.games.balanceRunDesc')}</p>
+              <h3 className="font-bold text-gluco-blue mb-2 text-lg">{t('games.balanceRun')}</h3>
+              <p className="text-gray-700 text-sm">{t('games.balanceRunDesc')}</p>
             </div>
 
             {/* Game 5 */}
             <div className="card-playful animate-bounce-in" style={{animationDelay: '0.2s'}}>
               <div className="text-5xl mb-4">📋</div>
-              <h3 className="font-bold text-gluco-blue mb-2 text-lg">{t('home.games.dailyTracker')}</h3>
-              <p className="text-gray-700 text-sm">{t('home.games.dailyTrackerDesc')}</p>
+              <h3 className="font-bold text-gluco-blue mb-2 text-lg">{t('games.dailyTracker')}</h3>
+              <p className="text-gray-700 text-sm">{t('games.dailyTrackerDesc')}</p>
             </div>
 
             {/* Game 6 */}
             <div className="card-playful animate-slide-right" style={{animationDelay: '0.2s'}}>
               <div className="text-5xl mb-4">🎓</div>
-              <h3 className="font-bold text-gluco-blue mb-2 text-lg">{t('home.games.learnTogether')}</h3>
-              <p className="text-gray-700 text-sm">{t('home.games.learnTogetherDesc')}</p>
+              <h3 className="font-bold text-gluco-blue mb-2 text-lg">{t('games.learnTogether')}</h3>
+              <p className="text-gray-700 text-sm">{t('games.learnTogetherDesc')}</p>
             </div>
           </div>
         </div>
@@ -146,59 +145,64 @@ export default function Home() {
           style={{backgroundImage: 'url(/assets/home-hero-banner-backdrop-v1.png)', backgroundSize: 'cover', backgroundAttachment: 'fixed'}}></div>
 
         <div className="max-w-6xl mx-auto">
-          <h2 className="heading-section text-center mb-12">{t('home.features.title')}</h2>
+          <h2 className="heading-section text-center mb-12">{t('features.title')}</h2>
 
           <div className="grid md:grid-cols-2 gap-8">
             {/* Feature 1 */}
             <div className="card-playful animate-slide-left">
               <div className="text-6xl mb-4">😊</div>
-              <h3 className="font-bold text-gluco-blue mb-2 text-xl">{t('home.features.emotional')}</h3>
-              <p className="text-gray-700">{t('home.features.emotionalDesc')}</p>
+              <h3 className="font-bold text-gluco-blue mb-2 text-xl">{t('features.emotional')}</h3>
+              <p className="text-gray-700">{t('features.emotionalDesc')}</p>
             </div>
 
             {/* Feature 2 */}
             <div className="card-playful animate-slide-right">
               <div className="text-6xl mb-4">🎖️</div>
-              <h3 className="font-bold text-gluco-blue mb-2 text-xl">{t('home.features.earnUnlock')}</h3>
-              <p className="text-gray-700">{t('home.features.earnUnlockDesc')}</p>
+              <h3 className="font-bold text-gluco-blue mb-2 text-xl">{t('features.earnUnlock')}</h3>
+              <p className="text-gray-700">{t('features.earnUnlockDesc')}</p>
             </div>
 
             {/* Feature 3 */}
             <div className="card-playful animate-slide-left" style={{animationDelay: '0.2s'}}>
               <div className="text-6xl mb-4">🎯</div>
-              <h3 className="font-bold text-gluco-blue mb-2 text-xl">{t('home.features.dailyMissions')}</h3>
-              <p className="text-gray-700">{t('home.features.dailyMissionsDesc')}</p>
+              <h3 className="font-bold text-gluco-blue mb-2 text-xl">{t('features.dailyMissions')}</h3>
+              <p className="text-gray-700">{t('features.dailyMissionsDesc')}</p>
             </div>
 
             {/* Feature 4 */}
             <div className="card-playful animate-slide-right" style={{animationDelay: '0.2s'}}>
               <div className="text-6xl mb-4">🔐</div>
-              <h3 className="font-bold text-gluco-blue mb-2 text-xl">{t('home.features.privacyFirst')}</h3>
-              <p className="text-gray-700">{t('home.features.privacyFirstDesc')}</p>
+              <h3 className="font-bold text-gluco-blue mb-2 text-xl">{t('features.privacyFirst')}</h3>
+              <p className="text-gray-700">{t('features.privacyFirstDesc')}</p>
             </div>
 
             {/* Feature 5 */}
             <div className="card-playful animate-bounce-in">
               <div className="text-6xl mb-4">⏱️</div>
-              <h3 className="font-bold text-gluco-blue mb-2 text-xl">{t('home.features.quickGames')}</h3>
-              <p className="text-gray-700">{t('home.features.quickGamesDesc')}</p>
+              <h3 className="font-bold text-gluco-blue mb-2 text-xl">{t('features.quickGames')}</h3>
+              <p className="text-gray-700">{t('features.quickGamesDesc')}</p>
             </div>
 
             {/* Feature 6 */}
             <div className="card-playful animate-bounce-in" style={{animationDelay: '0.1s'}}>
               <div className="text-6xl mb-4">🪅</div>
-              <h3 className="font-bold text-gluco-blue mb-2 text-xl">{t('home.features.plushToy')}</h3>
-              <p className="text-gray-700">{t('home.features.plushToyDesc')}</p>
+              <h3 className="font-bold text-gluco-blue mb-2 text-xl">{t('features.plushToy')}</h3>
+              <p className="text-gray-700">{t('features.plushToyDesc')}</p>
             </div>
           </div>
 
           {/* In-Game Economy Card */}
           <div className="mt-12 p-8 bg-gluco-beige rounded-3xl border-4 border-gluco-blue">
             <div className="text-center">
-              <h3 className="text-2xl md:text-3xl font-bold text-gluco-blue mb-4">{t('home.economy')}</h3>
-              <p className="text-lg text-gray-700 mb-4" dangerouslySetInnerHTML={{__html: locale === 'he' ? 'שחק משחקים כדי להרוויח <strong>מטבעות</strong> ו<strong>XP</strong>. השתמש במטבעות שלך כדי לשחק עם קוסמטיקה, דחיפות זמן ופריטים מיוחדים. <br/><strong style="display:block;margin-top:0.5rem">ללא כסף אמיתי צריך!</strong>' : 'Play games to earn <strong>coins</strong> and <strong>XP</strong>. Use your coins to unlock cosmetics, time boosts, and special items. <br/><strong style="display:block;margin-top:0.5rem">No real money needed!</strong>'}} />
+              <h3 className="text-2xl md:text-3xl font-bold text-gluco-blue mb-4">{t('economy')}</h3>
+              <p className="text-lg text-gray-700 mb-4">
+                Play games to earn <strong>coins</strong> and <strong>XP</strong>. {t('economyDescMain')}
+              </p>
+              <p className="text-lg font-bold text-gluco-blue mb-4" style={{display: 'block', marginTop: '0.5rem'}}>
+                {t('economyDescCTA')}
+              </p>
               <p className="text-gray-600 text-sm">
-                {t('home.economyFooter')}
+                {t('economyFooter')}
               </p>
             </div>
           </div>
@@ -208,31 +212,31 @@ export default function Home() {
       {/* Hero Emotional States */}
       <section className="py-20 px-4 bg-white/80">
         <div className="max-w-5xl mx-auto">
-          <h2 className="heading-section text-center mb-12">{t('home.emotionalStates')}</h2>
+          <h2 className="heading-section text-center mb-12">{t('emotionalStates')}</h2>
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="card-playful text-center">
               <div className="w-full h-48 bg-gluco-beige rounded-lg mb-4 flex items-center justify-center overflow-hidden">
                 <img src="/assets/hero-lion-happy.png" alt="Happy" className="h-48 w-auto" />
               </div>
-              <h3 className="text-2xl font-bold text-gluco-green mb-2">{t('home.happy')}</h3>
-              <p className="text-gray-700">{t('home.happyDesc')}</p>
+              <h3 className="text-2xl font-bold text-gluco-green mb-2">{t('happy')}</h3>
+              <p className="text-gray-700">{t('happyDesc')}</p>
             </div>
 
             <div className="card-playful text-center">
               <div className="w-full h-48 bg-gluco-beige rounded-lg mb-4 flex items-center justify-center overflow-hidden">
                 <img src="/assets/hero-lion-neutral.png" alt="Neutral" className="h-48 w-auto" />
               </div>
-              <h3 className="text-2xl font-bold text-gluco-blue mb-2">{t('home.neutral')}</h3>
-              <p className="text-gray-700">{t('home.neutralDesc')}</p>
+              <h3 className="text-2xl font-bold text-gluco-blue mb-2">{t('neutral')}</h3>
+              <p className="text-gray-700">{t('neutralDesc')}</p>
             </div>
 
             <div className="card-playful text-center">
               <div className="w-full h-48 bg-gluco-beige rounded-lg mb-4 flex items-center justify-center overflow-hidden">
                 <img src="/assets/hero-lion-sad.png" alt="Sad" className="h-48 w-auto" />
               </div>
-              <h3 className="text-2xl font-bold text-gluco-pink mb-2">{t('home.sad')}</h3>
-              <p className="text-gray-700">{t('home.sadDesc')}</p>
+              <h3 className="text-2xl font-bold text-gluco-pink mb-2">{t('sad')}</h3>
+              <p className="text-gray-700">{t('sadDesc')}</p>
             </div>
           </div>
         </div>
@@ -244,12 +248,12 @@ export default function Home() {
           style={{backgroundImage: 'url(/assets/missions-header-banner-v1.png)', backgroundSize: 'cover', backgroundAttachment: 'fixed'}}></div>
 
         <div className="max-w-4xl mx-auto text-center text-white relative z-10">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 animate-bounce-slow">{t('home.cta.title')}</h2>
-          <p className="text-xl mb-8 text-white/90">{t('home.cta.subtitle')}</p>
-          <p className="text-lg mb-4 text-white/80"><strong>{t('home.cta.oneTimePayment')}</strong> {t('home.cta.lifetime')}</p>
-          <p className="text-lg mb-8 text-white/80">{t('home.cta.benefits')}</p>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 animate-bounce-slow">{t('cta.title')}</h2>
+          <p className="text-xl mb-8 text-white/90">{t('cta.subtitle')}</p>
+          <p className="text-lg mb-4 text-white/80"><strong>{t('cta.oneTimePayment')}</strong> {t('cta.lifetime')}</p>
+          <p className="text-lg mb-8 text-white/80">{t('cta.benefits')}</p>
           <button className="px-8 py-4 rounded-full font-bold bg-white text-gluco-orange hover:bg-gluco-beige shadow-lg hover:shadow-2xl transition-all duration-200 transform hover:scale-105 text-lg animate-pulse-glow">
-            {t('home.cta.download')}
+            {t('cta.download')}
           </button>
         </div>
       </section>

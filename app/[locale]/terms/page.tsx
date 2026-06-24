@@ -3,7 +3,7 @@
 import { useTranslations } from 'next-intl';
 
 export default function Terms() {
-  const t = useTranslations();
+  const t = useTranslations('terms');
 
   return (
     <div>
@@ -22,120 +22,122 @@ export default function Terms() {
           <div className="max-w-4xl mx-auto">
             <div className="mb-12">
               <h1 className="heading-main mb-2 text-white drop-shadow-lg">
-                {t('terms.title')}
+                {t('title')}
               </h1>
               <p className="text-white/90 drop-shadow-lg text-lg">
-                {t('terms.lastUpdated')}
+                {t('lastUpdated')}
               </p>
             </div>
 
             <div className="space-y-6">
               <section className="card-playful bg-white/95 backdrop-blur-sm">
-                <h2 className="heading-section">{t('terms.welcome')}</h2>
-                <p className="text-gray-700" dangerouslySetInnerHTML={{__html: t('terms.welcomeDesc')}}></p>
+                <h2 className="heading-section">{t('welcome')}</h2>
+                <p className="text-gray-700">{t('welcomeDesc')}</p>
               </section>
 
               <section className="card-playful bg-white/95 backdrop-blur-sm">
-                <h2 className="heading-section">{t('terms.getting')}</h2>
+                <h2 className="heading-section">{t('getting')}</h2>
                 <p className="text-gray-700 mb-4">
-                  {t('terms.gettingDesc')}
+                  {t('gettingDesc')}
                 </p>
               </section>
 
               <section className="card-playful bg-white/95 backdrop-blur-sm">
                 <h2 className="heading-section">
-                  {t('terms.age')}
+                  {t('age')}
                 </h2>
                 <p className="text-gray-700 mb-4">
-                  {t('terms.ageDesc')}
+                  {t('ageDesc')}
                 </p>
               </section>
 
               <section className="card-playful bg-white/95 backdrop-blur-sm">
-                <h2 className="heading-section">{t('terms.disclaimer')}</h2>
-                <p className="text-gray-700" dangerouslySetInnerHTML={{__html: t('terms.disclaimerDesc')}}></p>
-              </section>
-
-              <section className="card-playful bg-white/95 backdrop-blur-sm">
-                <h2 className="heading-section">{t('terms.responsibility')}</h2>
-                <p className="text-gray-700 mb-4">{t('terms.responsibilityDesc')}</p>
-              </section>
-
-              <section className="card-playful bg-white/95 backdrop-blur-sm">
-                <h2 className="heading-section">{t('terms.provide')}</h2>
+                <h2 className="heading-section">{t('disclaimer')}</h2>
                 <p className="text-gray-700">
-                  {t('terms.provideDesc')}
+                  <strong>⚠️ {t('disclaimerWarning')}</strong> {t('disclaimerBody')} {t('disclaimerFooter')}
+                </p>
+              </section>
+
+              <section className="card-playful bg-white/95 backdrop-blur-sm">
+                <h2 className="heading-section">{t('responsibility')}</h2>
+                <p className="text-gray-700 mb-4">{t('responsibilityDesc')}</p>
+              </section>
+
+              <section className="card-playful bg-white/95 backdrop-blur-sm">
+                <h2 className="heading-section">{t('provide')}</h2>
+                <p className="text-gray-700">
+                  {t('provideDesc')}
                 </p>
               </section>
 
               <section className="card-playful bg-white/95 backdrop-blur-sm">
                 <h2 className="heading-section">
-                  {t('terms.noAds')}
+                  {t('noAds')}
                 </h2>
-                <p className="text-gray-700 mb-4">{t('terms.noAdsDesc')}</p>
+                <p className="text-gray-700 mb-4">{t('noAdsDesc')}</p>
               </section>
 
               <section className="card-playful bg-white/95 backdrop-blur-sm">
-                <h2 className="heading-section">{t('terms.ip')}</h2>
+                <h2 className="heading-section">{t('ip')}</h2>
                 <p className="text-gray-700">
-                  {t('terms.ipDesc')}
+                  {t('ipDesc')}
                 </p>
               </section>
 
               <section className="card-playful bg-white/95 backdrop-blur-sm">
-                <h2 className="heading-section">{t('terms.liability')}</h2>
+                <h2 className="heading-section">{t('liability')}</h2>
                 <p className="text-gray-700">
-                  {t('terms.liabilityDesc')}
+                  {t('liabilityDesc')}
                 </p>
               </section>
 
               <section className="card-playful bg-white/95 backdrop-blur-sm">
-                <h2 className="heading-section">{t('terms.refund')}</h2>
+                <h2 className="heading-section">{t('refund')}</h2>
                 <p className="text-gray-700">
-                  {t('terms.refundDesc')}
+                  {t('refundDesc')}
                 </p>
               </section>
 
               <section className="card-playful bg-white/95 backdrop-blur-sm">
                 <h2 className="heading-section">
-                  {t('terms.updates')}
+                  {t('updates')}
                 </h2>
-                <p className="text-gray-700 mb-4">{t('terms.updatesDesc')}</p>
+                <p className="text-gray-700 mb-4">{t('updatesDesc')}</p>
               </section>
 
               <section className="card-playful bg-white/95 backdrop-blur-sm">
-                <h2 className="heading-section">{t('terms.privacy')}</h2>
+                <h2 className="heading-section">{t('privacy')}</h2>
                 <p className="text-gray-700">
-                  {t('terms.privacyDesc')}
+                  {t('privacyDesc')}
                 </p>
               </section>
 
               <section className="card-playful bg-white/95 backdrop-blur-sm">
-                <h2 className="heading-section">{t('terms.prohibited')}</h2>
-                <p className="text-gray-700">{t('terms.prohibitedDesc')}</p>
+                <h2 className="heading-section">{t('prohibited')}</h2>
+                <p className="text-gray-700">{t('prohibitedDesc')}</p>
               </section>
 
               <section className="card-playful bg-white/95 backdrop-blur-sm">
-                <h2 className="heading-section">{t('terms.changesTerms')}</h2>
+                <h2 className="heading-section">{t('changesTerms')}</h2>
                 <p className="text-gray-700">
-                  {t('terms.changesTermsDesc')}
+                  {t('changesTermsDesc')}
                 </p>
               </section>
 
               <section className="card-playful bg-white/95 backdrop-blur-sm">
-                <h2 className="heading-section">{t('terms.governing')}</h2>
+                <h2 className="heading-section">{t('governing')}</h2>
                 <p className="text-gray-700">
-                  {t('terms.governingDesc')}
+                  {t('governingDesc')}
                 </p>
               </section>
 
               <section className="card-playful bg-white/95 backdrop-blur-sm">
-                <h2 className="heading-section">{t('terms.contactTerms')}</h2>
+                <h2 className="heading-section">{t('contactTerms')}</h2>
                 <p className="text-gray-700 mb-4">
-                  {t('terms.contactTermsDesc')}
+                  {t('contactTermsDesc')}
                 </p>
                 <div className="bg-gluco-beige p-4 rounded-lg">
-                  <p className="font-bold text-gluco-blue">GlucoHero Support</p>
+                  <p className="font-bold text-gluco-blue">Glucoheros Support</p>
                   <p>
                     Email:{" "}
                     <a
@@ -154,10 +156,10 @@ export default function Terms() {
               <section className="card-playful bg-gluco-orange/90 border-gluco-orange">
                 <div className="text-5xl mb-4">🎮</div>
                 <h2 className="heading-section text-white">
-                  {t('terms.thankyou')}
+                  {t('thankyou')}
                 </h2>
                 <p className="text-white text-lg">
-                  {t('terms.thankyouDesc')}
+                  {t('thankyouDesc')}
                 </p>
               </section>
 
