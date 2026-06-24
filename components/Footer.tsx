@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 
 export function Footer() {
@@ -21,28 +22,28 @@ export function Footer() {
             <h4 className="font-bold mb-4">{t('quickLinks')}</h4>
             <ul className="space-y-2 text-blue-100">
               <li>
-                <a
+                <Link
                   href="/"
                   className="hover:text-white transition-colors"
                 >
                   {t('home')}
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/support"
                   className="hover:text-white transition-colors"
                 >
                   {t('support')}
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/privacy"
                   className="hover:text-white transition-colors"
                 >
                   {t('privacy')}
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

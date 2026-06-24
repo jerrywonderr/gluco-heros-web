@@ -27,6 +27,7 @@ export async function generateMetadata({
       : "Glucoheros makes diabetes management fun for kids ages 4-8. One-time payment (29.9 ILS). Zero data collection. Play 6 games, earn rewards, and become a hero with Leo, Fiona, or Ellie!";
 
   return {
+    metadataBase: new URL("https://glucoheros.app"),
     title:
       locale === "he"
         ? "גלוקו הירואים - ניהול סוכרת משחקי לילדים"
@@ -108,10 +109,6 @@ export default async function RootLayout({
   return (
     <html lang={locale} dir={locale === "he" ? "rtl" : "ltr"}>
       <head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Comic+Sans+MS:wght@400;700&family=Fredoka:wght@400;600;700&display=swap"
-          rel="stylesheet"
-        />
         {/* Structured Data (JSON-LD) */}
         <script
           type="application/ld+json"

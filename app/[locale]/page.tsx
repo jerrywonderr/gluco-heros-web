@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Metadata } from "next";
 
@@ -57,7 +58,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 mb-10">
             <div className="card-playful animate-bounce-in" style={{animationDelay: '0.1s'}}>
               <div className="w-full h-40 bg-gluco-beige rounded-lg mb-4 flex items-center justify-center">
-                <img src="/assets/hero-lion-happy.png" alt={t('characters.leo')} className="h-40 w-auto" />
+                <Image src="/assets/hero-lion-happy.png" alt={t('characters.leo')} width={160} height={160} className="h-40 w-auto" />
               </div>
               <p className="font-bold text-2xl text-gluco-blue">{t('characters.leo')} 🦁</p>
               <p className="text-sm text-gray-600">{t('characters.leoBio')}</p>
@@ -66,7 +67,7 @@ export default function Home() {
 
             <div className="card-playful animate-bounce-in" style={{animationDelay: '0.2s'}}>
               <div className="w-full h-40 bg-gluco-beige rounded-lg mb-4 flex items-center justify-center">
-                <img src="/assets/hero-fox-happy.png" alt={t('characters.fiona')} className="h-40 w-auto" />
+                <Image src="/assets/hero-fox-happy.png" alt={t('characters.fiona')} width={160} height={160} className="h-40 w-auto" />
               </div>
               <p className="font-bold text-2xl text-gluco-blue">{t('characters.fiona')} 🦊</p>
               <p className="text-sm text-gray-600">{t('characters.fionaBio')}</p>
@@ -75,7 +76,7 @@ export default function Home() {
 
             <div className="card-playful animate-bounce-in" style={{animationDelay: '0.3s'}}>
               <div className="w-full h-40 bg-gluco-beige rounded-lg mb-4 flex items-center justify-center">
-                <img src="/assets/hero-elephant-happy.png" alt={t('characters.ellie')} className="h-40 w-auto" />
+                <Image src="/assets/hero-elephant-happy.png" alt={t('characters.ellie')} width={160} height={160} className="h-40 w-auto" />
               </div>
               <p className="font-bold text-2xl text-gluco-blue">{t('characters.ellie')} 🐘</p>
               <p className="text-sm text-gray-600">{t('characters.ellieBio')}</p>
@@ -217,7 +218,7 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="card-playful text-center">
               <div className="w-full h-48 bg-gluco-beige rounded-lg mb-4 flex items-center justify-center overflow-hidden">
-                <img src="/assets/hero-lion-happy.png" alt="Happy" className="h-48 w-auto" />
+                <Image src="/assets/hero-lion-happy.png" alt="Happy" width={192} height={192} className="h-48 w-auto" />
               </div>
               <h3 className="text-2xl font-bold text-gluco-green mb-2">{t('happy')}</h3>
               <p className="text-gray-700">{t('happyDesc')}</p>
@@ -225,7 +226,7 @@ export default function Home() {
 
             <div className="card-playful text-center">
               <div className="w-full h-48 bg-gluco-beige rounded-lg mb-4 flex items-center justify-center overflow-hidden">
-                <img src="/assets/hero-lion-neutral.png" alt="Neutral" className="h-48 w-auto" />
+                <Image src="/assets/hero-lion-neutral.png" alt="Neutral" width={192} height={192} className="h-48 w-auto" />
               </div>
               <h3 className="text-2xl font-bold text-gluco-blue mb-2">{t('neutral')}</h3>
               <p className="text-gray-700">{t('neutralDesc')}</p>
@@ -233,7 +234,7 @@ export default function Home() {
 
             <div className="card-playful text-center">
               <div className="w-full h-48 bg-gluco-beige rounded-lg mb-4 flex items-center justify-center overflow-hidden">
-                <img src="/assets/hero-lion-sad.png" alt="Sad" className="h-48 w-auto" />
+                <Image src="/assets/hero-lion-sad.png" alt="Sad" width={192} height={192} className="h-48 w-auto" />
               </div>
               <h3 className="text-2xl font-bold text-gluco-pink mb-2">{t('sad')}</h3>
               <p className="text-gray-700">{t('sadDesc')}</p>

@@ -1,6 +1,4 @@
-import { Config } from 'next-intl';
-
-const config: Config = {
+const config = {
   locales: ['he', 'en'],
   defaultLocale: 'he',
   messages: {

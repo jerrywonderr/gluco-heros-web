@@ -1,6 +1,8 @@
 'use client';
 
+import Image from 'next/image';
 import { useTranslations } from 'next-intl';
+import Link from 'next/link';
 import { LanguageSwitcher } from './LanguageSwitcher';
 
 export function Navbar() {
@@ -12,45 +14,47 @@ export function Navbar() {
         <div className="flex justify-between items-center h-24 sm:h-20">
           {/* Logo */}
           <div className="flex items-center gap-3 flex-shrink-0">
-            <img
+            <Image
               src="/splash-icon.png"
               alt="Glucoheros Logo"
+              width={64}
+              height={64}
               className="w-16 h-16 sm:w-14 sm:h-14"
             />
-            <a
+            <Link
               href="/"
               className="hidden sm:block text-lg sm:text-2xl font-bold text-gluco-blue hover:text-gluco-teal transition-colors whitespace-nowrap"
             >
-              Glucoheros
-            </a>
+              Gluco Heroes
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex gap-4 lg:gap-8">
-            <a
+            <Link
               href="/"
               className="text-gluco-blue hover:text-gluco-orange font-semibold transition-colors text-sm lg:text-base"
             >
               {t('home')}
-            </a>
-            <a
+            </Link>
+            <Link
               href="/support"
               className="text-gluco-blue hover:text-gluco-orange font-semibold transition-colors text-sm lg:text-base"
             >
               {t('support')}
-            </a>
-            <a
+            </Link>
+            <Link
               href="/privacy"
               className="text-gluco-blue hover:text-gluco-orange font-semibold transition-colors text-sm lg:text-base"
             >
               {t('privacy')}
-            </a>
-            <a
+            </Link>
+            <Link
               href="/terms"
               className="text-gluco-blue hover:text-gluco-orange font-semibold transition-colors text-sm lg:text-base"
             >
               {t('terms')}
-            </a>
+            </Link>
           </div>
 
           {/* Language Switcher & Mobile Menu */}
@@ -75,30 +79,30 @@ export function Navbar() {
                 </svg>
               </summary>
               <div className="absolute right-0 top-full mt-0 w-48 bg-white rounded-b-lg shadow-xl border-t-4 border-gluco-blue">
-                <a
+                <Link
                   href="/"
                   className="block w-full px-4 py-3 text-gluco-blue hover:bg-blue-50 font-semibold transition-colors text-sm border-b border-gray-100"
                 >
                   {t('home')}
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/support"
                   className="block w-full px-4 py-3 text-gluco-blue hover:bg-blue-50 font-semibold transition-colors text-sm border-b border-gray-100"
                 >
                   {t('support')}
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/privacy"
                   className="block w-full px-4 py-3 text-gluco-blue hover:bg-blue-50 font-semibold transition-colors text-sm border-b border-gray-100"
                 >
                   {t('privacy')}
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/terms"
                   className="block w-full px-4 py-3 text-gluco-blue hover:bg-blue-50 font-semibold transition-colors text-sm"
                 >
                   {t('terms')}
-                </a>
+                </Link>
               </div>
             </details>
           </div>

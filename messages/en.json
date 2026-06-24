@@ -131,6 +131,10 @@
       "onePrice": "One Price",
       "onePriceDesc": "29.9 ILS once. Lifetime access. No subscriptions."
     },
+    "economy": "💰 What's the in-game economy? Do I spend real money?",
+    "economyAnswerMain": "Glucoheros has an in-game economy using coins that you earn by playing games. You can trade coins for cosmetics, XP boosts, time boosts, and special items.",
+    "economyAnswerCTA": "This costs zero real money!",
+    "economyAnswerFooter": "Everything is earned through gameplay. No credit cards, no microtransactions, no spending. Just play and earn!",
     "stillQuestions": {
       "title": "Still have questions?",
       "subtitle": "Feel free to reach out to us!"
