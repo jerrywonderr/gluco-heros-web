@@ -1,12 +1,13 @@
 'use client';
 
 import Image from 'next/image';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
 import { LanguageSwitcher } from './LanguageSwitcher';
 
 export function Navbar() {
   const t = useTranslations('nav');
+  const locale = useLocale();
 
   return (
     <nav className="sticky top-0 z-50 bg-white shadow-lg border-b-4 border-gluco-blue">
@@ -22,7 +23,7 @@ export function Navbar() {
               className="w-16 h-16 sm:w-14 sm:h-14"
             />
             <Link
-              href="/"
+              href={`/${locale}`}
               className="hidden sm:block text-lg sm:text-2xl font-bold text-gluco-blue hover:text-gluco-teal transition-colors whitespace-nowrap"
             >
               Glucoheros
@@ -32,25 +33,25 @@ export function Navbar() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex gap-4 lg:gap-8">
             <Link
-              href="/"
+              href={`/${locale}`}
               className="text-gluco-blue hover:text-gluco-orange font-semibold transition-colors text-sm lg:text-base"
             >
               {t('home')}
             </Link>
             <Link
-              href="/support"
+              href={`/${locale}/support`}
               className="text-gluco-blue hover:text-gluco-orange font-semibold transition-colors text-sm lg:text-base"
             >
               {t('support')}
             </Link>
             <Link
-              href="/privacy"
+              href={`/${locale}/privacy`}
               className="text-gluco-blue hover:text-gluco-orange font-semibold transition-colors text-sm lg:text-base"
             >
               {t('privacy')}
             </Link>
             <Link
-              href="/terms"
+              href={`/${locale}/terms`}
               className="text-gluco-blue hover:text-gluco-orange font-semibold transition-colors text-sm lg:text-base"
             >
               {t('terms')}
@@ -86,19 +87,19 @@ export function Navbar() {
                   {t('home')}
                 </Link>
                 <Link
-                  href="/support"
+                  href={`/${locale}/support`}
                   className="block w-full px-4 py-3 text-gluco-blue hover:bg-blue-50 font-semibold transition-colors text-sm border-b border-gray-100"
                 >
                   {t('support')}
                 </Link>
                 <Link
-                  href="/privacy"
+                  href={`/${locale}/privacy`}
                   className="block w-full px-4 py-3 text-gluco-blue hover:bg-blue-50 font-semibold transition-colors text-sm border-b border-gray-100"
                 >
                   {t('privacy')}
                 </Link>
                 <Link
-                  href="/terms"
+                  href={`/${locale}/terms`}
                   className="block w-full px-4 py-3 text-gluco-blue hover:bg-blue-50 font-semibold transition-colors text-sm"
                 >
                   {t('terms')}

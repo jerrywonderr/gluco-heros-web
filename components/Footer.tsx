@@ -1,10 +1,11 @@
 'use client';
 
 import Link from 'next/link';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 
 export function Footer() {
   const t = useTranslations('footer');
+  const locale = useLocale();
 
   return (
     <footer className="bg-gluco-blue text-white py-12">
@@ -23,7 +24,7 @@ export function Footer() {
             <ul className="space-y-2 text-blue-100">
               <li>
                 <Link
-                  href="/"
+                  href={`/${locale}`}
                   className="hover:text-white transition-colors"
                 >
                   {t('home')}
@@ -31,7 +32,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/support"
+                  href={`/${locale}/support`}
                   className="hover:text-white transition-colors"
                 >
                   {t('support')}
@@ -39,7 +40,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/privacy"
+                  href={`/${locale}/privacy`}
                   className="hover:text-white transition-colors"
                 >
                   {t('privacy')}
