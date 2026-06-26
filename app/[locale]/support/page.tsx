@@ -1,6 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import { Metadata } from 'next';
 
 export default function Support() {
   const t = useTranslations('support');
